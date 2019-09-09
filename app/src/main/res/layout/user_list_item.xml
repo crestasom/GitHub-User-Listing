@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="user" type="com.example.githubuserdetails.model.UserDetails"/>
+    </data>
+
+
+        <LinearLayout
+            android:layout_marginStart="@dimen/item_horizontal_margin"
+            android:layout_marginEnd="@dimen/item_horizontal_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="name"
+                android:textStyle="bold"
+                android:textSize="@dimen/project_text"
+                android:text="@{user.login}"/>
+
+            <TextView
+                android:id="@+id/url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="url"
+                android:textSize="@dimen/project_text"
+                android:text="@{user.url}"/>
+
+            <TextView
+                android:id="@+id/html_url"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="html_url"
+                android:textSize="@dimen/project_text"
+                android:text="@{user.htmlUrl}"/>
+        </LinearLayout>
+
+</layout>
