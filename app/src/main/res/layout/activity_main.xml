@@ -5,15 +5,8 @@
     <data>
         <variable name="user" type="com.example.githubuserdetails.model.UserDetails"/>
     </data>
-<FrameLayout
-    android:id="@+id/fragment_container"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
 
-    <data>
-        <variable name="isLoading" type="boolean" />
-    </data>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,21 +14,13 @@
 
         android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/loading_projects"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_vertical|center_horizontal"
-        android:text="Loading User List"
-        android:textAlignment="center"
-        app:visibleGone="@{isLoading}"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:orientation="vertical"
-        app:visibleGone="@{!isLoading}">
+        >
 
         <TextView
             android:layout_width="match_parent"
@@ -48,14 +33,13 @@
             android:layout_marginBottom="20dp"
             android:textAlignment="center"/>
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/user_list"
-            android:contentDescription="@string/project_list"
+            android:contentDescription="Project List"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layoutManager="LinearLayoutManager"/>
 
     </LinearLayout>
     </LinearLayout>
-</FrameLayout>
 </layout>
